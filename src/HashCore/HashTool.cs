@@ -3,8 +3,19 @@
     /// <summary>
     /// 雜湊工具
     /// </summary>
-    public static class HashTool
+    public class HashTool
     {
+        private readonly MACAlgorithm.HMACSHA256 hmacsha256;
+
+        #region Constructor
+
+        public HashTool()
+        {
+            hmacsha256 = new MACAlgorithm.HMACSHA256();
+        }
+
+        #endregion
+
         #region HMAC - SHA256
 
         /// <summary>
@@ -13,9 +24,9 @@
         /// <param name="message">訊息</param>
         /// <param name="key">秘密金鑰</param>
         /// <returns></returns>
-        public static string HMACSHA256(string message, string key)
+        public string HMACSHA256(string message, string key)
         {
-            return MACAlgorithm.HMACSHA256.Hash(message, key);
+            return hmacsha256.Hash(message, key);
         }
 
         /// <summary>
@@ -25,9 +36,9 @@
         /// <param name="message">訊息</param>
         /// <param name="key">秘密金鑰</param>
         /// <returns></returns>
-        public static bool VerifyHMACSHA256(string hash, string message, string key)
+        public bool VerifyHMACSHA256(string hash, string message, string key)
         {
-            return MACAlgorithm.HMACSHA256.Verify(hash, message, key);
+            return hmacsha256.Verify(hash, message, key);
         }
 
         #endregion

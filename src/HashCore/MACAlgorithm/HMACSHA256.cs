@@ -7,7 +7,7 @@ namespace HashCore.MACAlgorithm
     /// <summary>
     /// HMAC - SHA256 加密
     /// </summary>
-    public static class HMACSHA256
+    public class HMACSHA256
     {
         /// <summary>
         /// 雜湊
@@ -15,7 +15,7 @@ namespace HashCore.MACAlgorithm
         /// <param name="message">訊息</param>
         /// <param name="key">秘密金鑰</param>
         /// <returns></returns>
-        public static string Hash(string message, string key)
+        public string Hash(string message, string key)
         {
             // UTF8 not emit BOM, https://docs.microsoft.com/zh-tw/dotnet/api/system.text.utf8encoding?view=netcore-3.1
             UTF8Encoding utf8 = new UTF8Encoding();
@@ -36,7 +36,7 @@ namespace HashCore.MACAlgorithm
         /// <param name="hash">雜湊值</param>
         /// <param name="message">訊息</param>
         /// <param name="key">秘密金鑰</param>
-        public static bool Verify(string hash, string message, string key)
+        public bool Verify(string hash, string message, string key)
         {
             return hash == Hash(message, key);
         }
