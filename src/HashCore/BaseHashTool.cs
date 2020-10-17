@@ -1,15 +1,15 @@
 ﻿namespace HashCore
 {
     /// <summary>
-    /// 雜湊工具
+    /// 雜湊工具(基底)
     /// </summary>
-    public class HashTool
+    public class BaseHashTool
     {
         private readonly MACAlgorithm.HMACSHA256 hmacsha256;
 
         #region Constructor
 
-        public HashTool()
+        public BaseHashTool()
         {
             hmacsha256 = new MACAlgorithm.HMACSHA256();
         }
@@ -32,13 +32,13 @@
         /// <summary>
         /// HMAC - SHA256 校驗
         /// </summary>
-        /// <param name="hash">雜湊值</param>
         /// <param name="message">訊息</param>
         /// <param name="key">秘密金鑰</param>
+        /// <param name="hash">雜湊值</param>
         /// <returns></returns>
-        public bool VerifyHMACSHA256(string hash, string message, string key)
+        public bool VerifyHMACSHA256(string message, string key, string hash)
         {
-            return hmacsha256.Verify(hash, message, key);
+            return hmacsha256.Verify(message, key, hash);
         }
 
         #endregion

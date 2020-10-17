@@ -23,10 +23,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>secretsettings.json</DependentUpon>
     </None>
-    <None Update="secretsettings.Test.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>secretsettings.json</DependentUpon>
-    </None>
   </ItemGroup>
 
 </Project>

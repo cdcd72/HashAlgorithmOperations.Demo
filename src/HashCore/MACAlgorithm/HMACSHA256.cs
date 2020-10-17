@@ -33,12 +33,12 @@ namespace HashCore.MACAlgorithm
         /// <summary>
         /// 校驗
         /// </summary>
-        /// <param name="hash">雜湊值</param>
         /// <param name="message">訊息</param>
         /// <param name="key">秘密金鑰</param>
-        public bool Verify(string hash, string message, string key)
+        /// <param name="hash">雜湊值</param>
+        public bool Verify(string message, string key, string hash)
         {
-            return hash == Hash(message, key);
+            return hash.Equals(Hash(message, key));
         }
     }
 }
