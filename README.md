@@ -16,10 +16,9 @@
 ![Image](img/result-2.jpg)
 > 你可以嘗試修改測試值和秘密設定！  
 2. You can try to modify test value and secret settings!  
-
-**Program.cs**  
-![Image](img/setting-1.jpg)  
-**secretsettings.Debug.json**  
+* Program.cs  
+![Image](img/setting-1.jpg)
+* secretsettings.Debug.json
 ![Image](img/setting-2.jpg)
 
 ### :two: 第二種方式
@@ -27,16 +26,15 @@
 1. Run the project from Visual Studio 2019 or by typing `dotnet build` in a command window build the project.
 > 執行命令看結果
 2. execute command, then you will see the default result.
-```
-$ cd ..\HashAlgorithmOperations.Demo\src\ConsoleApp\bin\Debug
-$ ConsoleApp HMACSHA256 Hash Test 
-```
-![Image](img/result-3.jpg)
+   ```
+   $ cd ..\HashAlgorithmOperations.Demo\src\ConsoleApp\bin\Debug
+   $ ConsoleApp HMACSHA256 Hash Test 
+   ```
+   ![Image](img/result-3.jpg)
 > 你可以嘗試修改秘密設定！
 3. You can try to modify secret settings!  
-
-**secretsettings.json**
-![Image](img/setting-3.jpg)
+   **secretsettings.json**
+   ![Image](img/setting-3.jpg)
 
 ## 目前提供的功能
 * 透過 HMACSHA256 產生雜湊(generate hash)及雜湊驗算(hash verify)
