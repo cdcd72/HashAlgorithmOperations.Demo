@@ -7,7 +7,7 @@
 :exclamation: This example get secret from secretsettings.json **isn't secure**.  
 
 ## 運行專案
-:one: 第一種方式
+### :one: 第一種方式
 > 透過 Visual Studio 2019 或者利用 `dotnet run` 指令把專案跑起來看結果。  
 1. Run the project from Visual Studio 2019 or by typing `dotnet run` in a command window, then you will see the default result.  
 * By Visual Studio 2019
@@ -16,10 +16,12 @@
 ![Image](img/result-2.jpg)
 > 你可以嘗試修改測試值和秘密設定！  
 2. You can try to modify test value and secret settings!  
+**Program.cs**
 ![Image](img/setting-1.jpg)
+**secretsettings.Debug.json**
 ![Image](img/setting-2.jpg)
 
-:two: 第二種方式
+### :two: 第二種方式
 > 透過 Visual Studio 2019 或者利用 `dotnet build` 指令建置專案。
 1. Run the project from Visual Studio 2019 or by typing `dotnet build` in a command window build the project.
 > 執行命令看結果
@@ -31,6 +33,7 @@
     ![Image](img/result-3.jpg)
 > 你可以嘗試修改秘密設定！
 3. You can try to modify secret settings!  
+    **secretsettings.json**
     ![Image](img/setting-3.jpg)
 
 ## 目前提供的功能
