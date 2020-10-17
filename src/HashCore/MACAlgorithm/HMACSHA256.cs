@@ -38,7 +38,7 @@ namespace HashCore.MACAlgorithm
         /// <param name="hash">雜湊值</param>
         public bool Verify(string message, string key, string hash)
         {
-            return hash.Equals(Hash(message, key));
+            return string.Equals(hash, Hash(message, key), StringComparison.InvariantCultureIgnoreCase);
         }
     }
 }

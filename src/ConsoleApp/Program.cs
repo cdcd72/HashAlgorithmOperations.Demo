@@ -36,10 +36,11 @@ namespace ConsoleApp
             Operate operate;
 
 #if DEBUG
-            args = new string[] { "HMACSHA256", "Hash", "Test" };
+            if (args.Length == 0)
+                args = new string[] { "HMACSHA256", "Hash", "Test" };
 #endif
 
-            if (args.Length != 0)
+            if (args.Length > 0)
             {
                 algorithm = (Algorithm)System.Enum.Parse(typeof(Algorithm), args[0]);
                 operate = (Operate)System.Enum.Parse(typeof(Operate), args[1]);
